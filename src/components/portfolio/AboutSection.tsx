@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Code2, Lightbulb, Rocket, User } from 'lucide-react';
+import profileImage from "/Bhumi Bansal_photo.png";
+
 
 export const AboutSection = () => {
   const ref = useRef(null);
@@ -63,7 +65,8 @@ export const AboutSection = () => {
               
               {/* Profile placeholder */}
               <div className="absolute inset-4 rounded-full bg-secondary border border-border flex items-center justify-center overflow-hidden group-hover:border-primary/50 transition-colors">
-                <User size={80} className="text-muted-foreground" />
+                <img src={profileImage}
+                alt="Profile" className="w-full h-full object-cover"/>
               </div>
 
               {/* Floating badge */}
@@ -87,7 +90,7 @@ export const AboutSection = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               I'm a <span className="text-foreground font-medium">2nd-year Engineering student</span> with 
               a deep passion for technology and innovation. Currently pursuing my degree in 
-              <span className="text-primary"> Computer Science / Electronics Engineering</span>, I spend 
+              <span className="text-primary"> Electronics and Communications Engineering</span>, I spend 
               my time building projects, learning new frameworks, and exploring the ever-evolving 
               world of software development.
             </p>

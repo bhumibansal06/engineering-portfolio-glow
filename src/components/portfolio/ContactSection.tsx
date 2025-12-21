@@ -25,9 +25,9 @@ export const ContactSection = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'your.email@example.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (234) 567-890' },
-    { icon: MapPin, label: 'Location', value: 'City, Country' },
+    { icon: Mail, label: 'Email', value: 'bhumibansal0611@gmail.com' },
+    { icon: Phone, label: 'Phone', value: '+91 62912 60745' },
+    { icon: MapPin, label: 'Location', value: 'Kolkata, India' },
   ];
 
   return (
@@ -64,7 +64,7 @@ export const ContactSection = () => {
                   <input
                     type="text"
                     required
-                    placeholder="John Doe"
+                    placeholder="Bhumi Bansal"
                     className="w-full px-4 py-3 rounded-xl bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-muted-foreground"
                   />
                 </div>
@@ -73,7 +73,7 @@ export const ContactSection = () => {
                   <input
                     type="email"
                     required
-                    placeholder="john@example.com"
+                    placeholder="bhumibansal0611@gmail.com"
                     className="w-full px-4 py-3 rounded-xl bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-muted-foreground"
                   />
                 </div>

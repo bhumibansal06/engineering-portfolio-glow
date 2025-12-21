@@ -8,8 +8,8 @@ const skillCategories = [
       { name: 'JavaScript', level: 90 },
       { name: 'TypeScript', level: 85 },
       { name: 'Python', level: 80 },
-      { name: 'C++', level: 75 },
-      { name: 'Java', level: 70 },
+      { name: 'C', level: 90 },
+      { name: 'Java', level: 95 },
     ],
   },
   {

@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, ArrowUp } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-  { icon: Mail, href: 'mailto:your.email@example.com', label: 'Email' },
+  { icon: Github, href: 'https://github.com/bhumibansal06', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/bhumi-bansal-6082a6265/', label: 'LinkedIn' },
+  { icon: Mail, href: 'bhumibansal0611@gmail.com', label: 'Email' },
 ];
 
 export const Footer = () => {
