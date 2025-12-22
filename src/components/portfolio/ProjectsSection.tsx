@@ -24,7 +24,6 @@ const projects = [
     description: 'High-performance routing system modeling transportation networks as weighted graphs and computing shortest paths using Dijkstra’s Algorithm.',
     tech: ['Java', 'Data Structures', 'Algorithms', 'Docker'],
     github: 'https://github.com/bhumibansal06/Route-Optimization.git',
-    live: '#',
     featured: false,
   },
   {
@@ -32,7 +31,6 @@ const projects = [
     description: 'Local-first AI voice assistant supporting speech recognition and text-to-speech with modular command handling and minimal cloud dependency.',
     tech: ['Python', 'SpeechRecognition', 'PyAudio'],
     github: 'https://github.com/bhumibansal06/aura-voice-assistant.git',
-    live: '#',
     featured: false,
   },
   {
