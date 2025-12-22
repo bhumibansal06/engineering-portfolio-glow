@@ -82,7 +82,6 @@ export const EducationSection = () => {
                   )}
 
                   <div className={`flex items-center gap-2 mb-2 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
-                   
                     <h3 className="font-heading font-semibold text-lg">{item.degree}</h3>
                   </div>
 

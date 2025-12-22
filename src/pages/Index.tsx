@@ -29,8 +29,7 @@ const Index = () => {
         <ContactSection />
       </main>
       
-      {/* Footer */}
-      <Footer />
+
     </div>
   );
 };
