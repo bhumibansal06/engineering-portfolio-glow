@@ -4,12 +4,36 @@ import { ExternalLink, Github, Folder } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Wanderlust',
-    description: 'A full-stack travel accommodation platform with secure authentication, listing management, reviews, maps, and payment integration.',
-    tech: ['Express.js', 'Node.js', 'MongoDB', 'Razorpay'],
+    title: 'Posture-coach',
+    description: 'Real-time posture monitoring system using browser-based pose detection. Performs local inference on webcam input and provides instant visual feedback while preserving user privacy.',
+    tech: ['React', 'TypeScript', 'Tensorflow.js'],
+    github: 'https://github.com/bhumibansal06/posture-coach',
+    live: 'https://posturecoach.netlify.app/',
+    featured: true,
+  },
+  {
+    title: 'TripNest',
+    description: 'Full-stack accommodation platform supporting listings, reviews, image uploads, authentication, and payments with a scalable MVC backend.',
+    tech: ['Express.js', 'Node.js', 'MongoDB', 'Razorpay', 'Cloudinary'],
     github: 'https://github.com/bhumibansal06/wanderlust.git',
     live: 'https://stayfinder-57z5.onrender.com/',
     featured: true,
+  },
+  {
+    title: 'Route Optimization Engine',
+    description: 'High-performance routing system modeling transportation networks as weighted graphs and computing shortest paths using Dijkstra’s Algorithm.',
+    tech: ['Java', 'Data Structures', 'Algorithms', 'Docker'],
+    github: 'https://github.com/bhumibansal06/Route-Optimization.git',
+    live: '#',
+    featured: false,
+  },
+  {
+    title: 'VoxCore',
+    description: 'Local-first AI voice assistant supporting speech recognition and text-to-speech with modular command handling and minimal cloud dependency.',
+    tech: ['Python', 'SpeechRecognition', 'PyAudio'],
+    github: 'https://github.com/bhumibansal06/aura-voice-assistant.git',
+    live: '#',
+    featured: false,
   },
   {
     title: 'BlogPage',
@@ -19,37 +43,14 @@ const projects = [
     live: 'https://blogpage-lovat.vercel.app/',
     featured: true,
   },
-  {
-    title: 'Posture-coach',
-    description: 'A posture monitoring app using JavaScript with real-time feedback and interactive UI.',
-    tech: ['JavaScript', 'DOM APIs'],
-    github: 'https://github.com/bhumibansal06/posture-coach',
-    live: 'https://posturecoach.netlify.app/',
-    featured: true,
-  },
+  
   {
     title: 'User-Crud-Application',
     description: 'A structured CRUD application built with Express.js and EJS for managing user data.',
     tech: ['Node.js', 'EJS', 'SQL', 'Express.js'],
     github: 'https://github.com/bhumibansal06/User-CRUD-Application',
     featured: false,
-  },
-  {
-    title: 'Aura - Voice Assistant',
-    description: 'A Python-based local voice assistant that responds to commands, plays audio, and demonstrates modular voice processing logic.',
-    tech: ['Python', 'SpeechRecognition', 'PyAudio', 'TTS'],
-    github: 'https://github.com/bhumibansal06/aura-voice-assistant.git',
-    live: '#',
-    featured: false,
-  },
-  {
-    title: 'Route Optimization Engine',
-    description: 'A high-performance route optimization engine that models a transportation network as a weighted graph and computes the optimal shortest path using Dijkstra’s Algorithm.',
-    tech: ['Java', 'Data Structures', 'Algorithms'],
-    github: 'https://github.com/bhumibansal06/Route-Optimization.git',
-    live: '#',
-    featured: false,
-  },
+  }
 ];
 
 export const ProjectsSection = () => {
