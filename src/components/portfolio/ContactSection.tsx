@@ -158,22 +158,8 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Map placeholder */}
-            <div className="h-48 rounded-2xl bg-secondary/50 border border-border overflow-hidden relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <MapPin className="w-8 h-8 text-primary animate-bounce" />
-              </div>
-              <div 
-                className="absolute inset-0 opacity-10"
-                style={{
-                  backgroundImage: `
-                    linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px),
-                    linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)
-                  `,
-                  backgroundSize: '40px 40px',
-                }}
-              />
-            </div>
+            
+           
           </motion.div>
         </div>
       </div>

@@ -69,11 +69,16 @@ export const Navbar = () => {
                 e.preventDefault();
                 scrollToSection('#home');
               }}
-              className="font-heading font-bold text-xl md:text-2xl gradient-text"
+              className="font-heading font-bold text-xl md:text-2xl gradient-text flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Portfolio
+              <img 
+                src="/Bhumi Bansal_photo.png" 
+                alt="Profile" 
+                className="w-10 h-10 rounded-full object-cover"
+              />
+             
             </motion.a>
 
             {/* Desktop Navigation */}

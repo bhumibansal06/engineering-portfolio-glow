@@ -41,7 +41,7 @@
     --glow-accent: 262 83% 58%;
     --gradient-start: 174 72% 40%;
     --gradient-end: 262 83% 58%;
-    
+
     /* Shadows */
     --shadow-glow: 0 0 60px hsl(174 72% 40% / 0.2);
     --shadow-card: 0 8px 32px hsl(220 13% 91% / 0.5);
@@ -81,10 +81,13 @@
     --glow-accent: 262 83% 68%;
     --gradient-start: 174 72% 56%;
     --gradient-end: 262 83% 68%;
-    
+
     /* Shadows */
     --shadow-glow: 0 0 60px hsl(174 72% 56% / 0.3);
     --shadow-card: 0 8px 32px hsl(222 47% 4% / 0.5);
+  }
+  .theme {
+    --animate-rippling: rippling 1s ease-out;
   }
 }
 
@@ -180,4 +183,25 @@
 ::selection {
   background: hsl(var(--primary) / 0.3);
   color: hsl(var(--foreground));
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  @keyframes rippling {
+  0% {
+    opacity: 1;
+    }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    }
+  }
 }

@@ -15,21 +15,8 @@ export const Footer = () => {
   return (
     <footer className="py-12 border-t border-border relative">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           {/* Logo / Brand */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center md:text-left"
-          >
-            <h3 className="font-heading font-bold text-xl gradient-text mb-2">
-              Portfolio
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} All rights reserved.
-            </p>
-          </motion.div>
 
           {/* Social Links */}
           <motion.div
@@ -58,19 +45,6 @@ export const Footer = () => {
               </motion.a>
             ))}
           </motion.div>
-
-          {/* Made with love */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="flex items-center gap-2 text-sm text-muted-foreground"
-          >
-            Made with{' '}
-            <Heart size={14} className="text-destructive fill-destructive animate-pulse" />{' '}
-            using React
-          </motion.p>
         </div>
       </div>
 

@@ -21,15 +21,7 @@ const education = [
     highlights: ['Percentage: 80.25%'],
     current: false,
   },
-  {
-    degree: 'Secondary Education (10th)',
-    institution: 'ABSS',
-    location: 'Kolkata, India',
-    period: '2011 - 2022',
-    description: 'Foundation education with excellent academic performance and active participation in extracurriculars.',
-    highlights: ['Percentage: 90%'],
-    current: false,
-  },
+  
 ];
 
 export const EducationSection = () => {
@@ -90,7 +82,7 @@ export const EducationSection = () => {
                   )}
 
                   <div className={`flex items-center gap-2 mb-2 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
-                    <GraduationCap className="w-5 h-5 text-primary" />
+                   
                     <h3 className="font-heading font-semibold text-lg">{item.degree}</h3>
                   </div>
 

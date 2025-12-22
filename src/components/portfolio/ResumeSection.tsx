@@ -5,51 +5,29 @@ import {
   Linkedin, 
   Github, 
   Mail, 
-  Twitter,
-  Globe,
-  ExternalLink
+
 } from 'lucide-react';
+
+import { RippleButton } from '../ui/ripple-button';
 
 const links = [
   {
-    name: 'Resume',
-    description: 'Download my resume',
-    icon: FileDown,
-    href: '#',
-    color: 'from-primary to-primary/80',
-    action: 'Download',
-  },
-  {
     name: 'LinkedIn',
-    description: 'Connect with me professionally',
     icon: Linkedin,
     href: 'https://www.linkedin.com/in/bhumi-bansal-6082a6265/',
-    color: 'from-[#0077B5] to-[#0077B5]/80',
-    action: 'Connect',
+    color: 'text-[#0077B5] hover:text-[#0077B5]/80',
   },
   {
     name: 'GitHub',
-    description: 'Check out my code',
     icon: Github,
     href: 'https://github.com/bhumibansal06',
-    color: 'from-[#333] to-[#333]/80',
-    action: 'Follow',
+    color: 'text-foreground hover:text-foreground/80 dark:text-foreground dark:hover:text-foreground/80',
   },
   {
     name: 'Email',
-    description: 'Send me a message',
     icon: Mail,
-    href: 'bhumibansal0611@gmail.com',
-    color: 'from-accent to-accent/80',
-    action: 'Email',
-  },
-  {
-    name: 'Portfolio',
-    description: 'Visit my personal site',
-    icon: Globe,
-    href: '#',
-    color: 'from-primary to-accent',
-    action: 'Visit',
+    href: 'mailto:bhumibansal0611@gmail.com',
+    color: 'text-accent hover:text-accent/80',
   },
 ];
 
@@ -77,7 +55,7 @@ export const ResumeSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="flex justify-center gap-8">
           {links.map((link, index) => (
             <motion.a
               key={link.name}
@@ -87,44 +65,36 @@ export const ResumeSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02, y: -5 }}
-              whileTap={{ scale: 0.98 }}
-              className="group p-6 rounded-2xl glass-card hover:border-primary/50 transition-all flex items-center gap-4"
+              whileHover={{ scale: 1.1, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className={`group relative p-3 rounded-full ${link.color} transition-colors`}
+              aria-label={link.name}
+              title={link.name}
             >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${link.color} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
-                <link.icon className="w-6 h-6 text-white" />
-              </div>
-              
-              <div className="flex-grow min-w-0">
-                <h3 className="font-heading font-semibold text-lg group-hover:text-primary transition-colors">
-                  {link.name}
-                </h3>
-                <p className="text-sm text-muted-foreground truncate">
-                  {link.description}
-                </p>
-              </div>
-
-              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+              <link.icon className="w-8 h-8" />
+              <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                {link.name}
+                <span className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-4 border-t-gray-900"></span>
+              </span>
             </motion.a>
           ))}
         </div>
 
-        {/* Featured Resume Download */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.05, boxShadow: '0 0 40px hsl(var(--primary) / 0.4)' }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-xl transition-all"
-          >
-            <FileDown size={20} />
-            Download Full Resume (PDF)
-          </motion.a>
+        <RippleButton 
+          className="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-xl hover:scale-105 active:scale-95 transition-all text-foreground dark:text-white"
+          onClick={() => window.open('https://drive.google.com/file/d/1nPaGRqyQ9YBQkVKbYQiyhu6o5jNru6IS/view', '_blank')}
+        >
+          <span className="flex items-center gap-3">
+            <FileDown size={20} className="flex-shrink-0" />
+            <span>View Resume</span>
+          </span>
+        </RippleButton>
         </motion.div>
       </div>
     </section>

@@ -98,7 +98,7 @@ export const SkillsSection = () => {
                           delay: categoryIndex * 0.1 + skillIndex * 0.1,
                           ease: 'easeOut',
                         }}
-                        className="h-full rounded-full bg-gradient-to-r from-primary to-accent relative"
+                        className="h-full rounded-full bg-gradient-to-r from-white to-cyan-700 relative"
                       >
                         <div className="absolute inset-0 bg-shimmer animate-shimmer" />
                       </motion.div>
