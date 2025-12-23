@@ -45,6 +45,8 @@
     /* Shadows */
     --shadow-glow: 0 0 60px hsl(174 72% 40% / 0.2);
     --shadow-card: 0 8px 32px hsl(220 13% 91% / 0.5);
+    --sky-400: #38bdf8;
+    --sky-500: #0ea5e9;
   }
 
   .dark {
@@ -85,9 +87,12 @@
     /* Shadows */
     --shadow-glow: 0 0 60px hsl(174 72% 56% / 0.3);
     --shadow-card: 0 8px 32px hsl(222 47% 4% / 0.5);
+    --sky-400: #38bdf8;
+    --sky-500: #0ea5e9;
   }
   .theme {
     --animate-rippling: rippling 1s ease-out;
+    --animate-marquee: marquee var(--duration, 30s) linear infinite;
   }
 }
 
@@ -202,6 +207,11 @@
   100% {
     transform: scale(2);
     opacity: 0;
+    }
+  }
+  @keyframes marquee {
+  to {
+    transform: translateX(-50%);
     }
   }
 }
